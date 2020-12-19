@@ -70,6 +70,8 @@ public class UserInput : MonoBehaviour
         
     }
 
+    public bool affectLocomotion;
+
     //private bool wasJumping, wasTeleporting;
     private void Update() {
        // TestJoystick();
@@ -92,7 +94,7 @@ public class UserInput : MonoBehaviour
 
         KeyboardMove(isInputFactor ? inputFactorOnBoost:1);
         KeyboardRotate(isInputFactor ? inputFactorOnBoost : 1);
-        locomotion.SetXZFactor(isMoveFactor ? userLocomotionFactorOnBoost : 1);
+        if(affectLocomotion) locomotion.SetXZFactor(isMoveFactor ? userLocomotionFactorOnBoost : 1);
 
         //wasJumping = IsPressedDown("Jump", null, 12, wasJumping);
 

@@ -15,9 +15,9 @@ public class ScaleByPosition : MonoBehaviour
 
     }
 
-    private Vector3 firstScale;
+    public Vector3 firstScale;
     // Start is called before the first frame update
-    void Start()
+    void Reset()
     {
         firstScale = transform.localScale;
     }
@@ -40,7 +40,7 @@ public class ScaleByPosition : MonoBehaviour
         if (v < 0) v = 0;
         if (v > 1) v = 1;
         if (scaleBy == ScaleBy.SecondScaleAtCenter) v = Mathf.Abs(v * 2 - 1);
-
+        else if (scaleBy == ScaleBy.SecondScaleAtStart) v = 1 - v;
         transform.localScale = Vector3.Lerp(secondScale, firstScale, v);
         //Debug.Log("Value is " + GetFactor());
     }

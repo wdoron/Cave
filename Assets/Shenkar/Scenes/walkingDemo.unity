@@ -983,6 +983,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5403214195449260716, guid: 35046ffd0f3214b499d961074be7d05e, type: 3}
+      propertyPath: moveFactor.x
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5403214195449260716, guid: 35046ffd0f3214b499d961074be7d05e, type: 3}
+      propertyPath: moveFactor.z
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5435671019618017240, guid: 35046ffd0f3214b499d961074be7d05e, type: 3}
       propertyPath: m_Name
       value: LocomotionRig (1)
@@ -1135,7 +1143,7 @@ Transform:
   m_GameObject: {fileID: 840026967}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 1.5}
-  m_LocalScale: {x: 0.1, y: 2, z: 0.1}
+  m_LocalScale: {x: 0.1, y: 0.73198, z: 0.1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
@@ -1753,7 +1761,7 @@ Transform:
   m_GameObject: {fileID: 955595736}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.1, y: 2, z: 0.1}
+  m_LocalScale: {x: 0.1, y: 0.73198, z: 0.1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -3929,7 +3937,7 @@ Transform:
   m_GameObject: {fileID: 2131739653}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: 0}
-  m_LocalScale: {x: 4, y: 1, z: 1}
+  m_LocalScale: {x: 2.5, y: 1, z: 1}
   m_Children:
   - {fileID: 2064992510}
   - {fileID: 277312823}
@@ -3950,9 +3958,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startArea: {x: 0, y: 0, z: 0}
   endArea: {x: 0, y: 0, z: 1.5}
-  scaleBy: 0
+  scaleBy: 1
   secondScale: {x: 0.3, y: 1, z: 1}
   origin: {fileID: 1395705949}
+  firstScale: {x: 2.5, y: 1, z: 1}
 --- !u!1 &2137802081
 GameObject:
   m_ObjectHideFlags: 0
