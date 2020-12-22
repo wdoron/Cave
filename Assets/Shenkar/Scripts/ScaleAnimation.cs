@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HeartBeatScale : ATimeAnimation
+public class ScaleAnimation : ATimeAnimation
 {
     public Vector3 targetScale;
     
