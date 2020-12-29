@@ -21,7 +21,7 @@ public abstract class ATimeAnimation : MonoBehaviour {
     public float maxWaitTime = 0;
 
     [Header("Misc")]
-    public bool disableGoOnFinish = true;
+    public bool disableGoOnFinish = false;
     protected void Awake()
     {
         t = transform;
@@ -31,7 +31,10 @@ public abstract class ATimeAnimation : MonoBehaviour {
     {
         reverse = newReverse;
     }
-
+    public void ResetAnimation() {
+        StopAllCoroutines();
+        StartCoroutine(Animate());
+    }
     public void OnEnable()
     {
         StartCoroutine(Animate());
