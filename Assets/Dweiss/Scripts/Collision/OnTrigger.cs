@@ -37,7 +37,7 @@ namespace Dweiss.Common
 
         public void OnTriggerExit(Collider cldr)
         {
-            if (debug) Debug.Log(name + " OnTriggerExit " + cldr + " tag " + cldr.gameObject.tag);
+            if (debug) Debug.Log(transform.FullName() + " OnTriggerExit " + cldr + " tag " + cldr.gameObject.tag);
             if ((string.IsNullOrEmpty(tagToCompare) || cldr.gameObject.CompareTag(tagToCompare)) &&
                    layer.HasLayer(cldr.gameObject.layer))
             {
