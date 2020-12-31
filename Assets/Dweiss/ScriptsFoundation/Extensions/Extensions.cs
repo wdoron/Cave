@@ -41,6 +41,7 @@ public static class Extensions
         return new Vector3(rnd.Range(p.x, notNegative), rnd.Range(p.y, notNegative), rnd.Range(p.z, notNegative));
     }
 
+
     public static Vector3 RandomInBounds(this System.Random rnd, Bounds b)
     {
         return b.center + rnd.RandomInVector(b.extents, false);
