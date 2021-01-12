@@ -2426,6 +2426,10 @@ PrefabInstance:
       propertyPath: onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 4586112204334818494, guid: a39dcecb933f3f04f861a0c8889b6286, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6000552013355441586, guid: a39dcecb933f3f04f861a0c8889b6286, type: 3}
       propertyPath: debug
       value: 1
