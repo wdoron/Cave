@@ -11,10 +11,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Shenkar/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 0
+  - enabled: 1
     path: Assets/Shenkar/Scenes/track.unity
     guid: dc6b04b1599117741b1a0ed838ee9c36
-  - enabled: 1
+  - enabled: 0
     path: Assets/Shenkar/Scenes/DesignTrack.unity
     guid: 75923f14c39d6a842bc15fc23391a0cf
   m_configObjects:
