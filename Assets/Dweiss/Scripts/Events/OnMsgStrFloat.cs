@@ -11,7 +11,7 @@ namespace Dweiss
         [SerializeField] private string msgId;
         [SerializeField] private float delay = -1;
         [SerializeField] private bool runOnDisable = false;
-
+        [SerializeField] private bool debug = false;
         public Dweiss.EventFloat onEvent;
 
         private void Start()
@@ -41,6 +41,7 @@ namespace Dweiss
 
         private void Action(float f)
         {
+            if(debug) Debug.Log("Event catch " + msgId + " v " + f);
             if (delay < 0)
             {
                 onEvent.Invoke(f);

@@ -8,10 +8,16 @@ namespace Dweiss
     {
         public string defaultId = "";
         public float delay = -1;
+
+        private void Reset() {
+            defaultId = name;
+        }
+        [ContextMenu("Raise")]
         public void Raise()
         {
             RaiseMsg(defaultId);
         }
+        [ContextMenu("RaiseNow")]
         public void RaiseNow()
         {
             MsgSystemStr.S.Raise(defaultId);
@@ -20,10 +26,21 @@ namespace Dweiss
         {
             if (delay < 0)
             {
-                MsgSystemStr.S.Raise(msg);
+                Dweiss.Msg.MsgSystem.Raise(msg);
             } else
             {
                 this.WaitForSeconds(delay, () => MsgSystemStr.S.Raise(msg));
+            }
+        }
+        [ContextMenu("TestRaiseNow float ")]
+        void TestRaiseNow() {
+            RaiseMsgWithFloat(.5f);
+        }
+        public void RaiseMsgWithFloat(float v) {
+            if (delay < 0) {
+                Dweiss.Msg.MsgSystem.Raise(defaultId, v);
+            } else {
+                this.WaitForSeconds(delay, () => Dweiss.Msg.MsgSystem.Raise(defaultId, v));
             }
         }
 

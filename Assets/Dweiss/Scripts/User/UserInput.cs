@@ -72,6 +72,11 @@ public class UserInput : MonoBehaviour
 
     public bool affectLocomotion;
 
+
+    public void Restart() {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
+    }
+
     //private bool wasJumping, wasTeleporting;
     private void Update() {
        // TestJoystick();
@@ -79,12 +84,13 @@ public class UserInput : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape)) 
             Application.Quit();
 
-        if (Input.GetButtonDown("Cancel")) 
-            UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
+        if (Input.GetButtonDown("Cancel"))
+            Restart();
 
         if (Input.GetKeyDown(KeyCode.R) && mover.IsJumping == false && userMngr.IsTeleporting == false) {
-            mover.ResetTransform();
-            locomotion.ResetLocomotionPosToZero();
+            Restart(); 
+            //mover.ResetTransform();
+            //locomotion.ResetLocomotionPosToZero();
         }
 
         if (userMngr.IsTeleporting) return;
