@@ -96,14 +96,14 @@ Material:
     - _Activate_Target_2: 0
     - _Activate_Target_3: 0
     - _Activate_Target_4: 1
-    - _Animation_speed: 0.3
+    - _Animation_speed: 0.4
     - _BackFace_Intensity: 1
     - _BumpScale: 1
     - _ColorBoost: 25
     - _ColorBoostdiff: 1
     - _Cutoff: 0.5
     - _Debug_Mask: 0
-    - _DefaultOutlineOpacity: 1.7
+    - _DefaultOutlineOpacity: 5.6
     - _DefaultShrink: 0
     - _DetailNormalMapScale: 1
     - _DirectionChange: 1
@@ -117,13 +117,13 @@ Material:
     - _InfluenceRadius: 0.5
     - _Metallic: 0
     - _Mode: 0
-    - _NormalPush: 1.1
+    - _NormalPush: 3.31
     - _OcclusionStrength: 1
     - _Outline_Opacity: 69.8
     - _PannerX: 1
     - _PannerY: 1
     - _Parallax: 0.02
-    - _Shrink_Faces_Amplitude: 0.53
+    - _Shrink_Faces_Amplitude: 1.94
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
