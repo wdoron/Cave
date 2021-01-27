@@ -8,8 +8,9 @@ public class AudioRepeat : MonoBehaviour
     [SerializeField]private float defaultWaitTime = 2;
     [SerializeField] private Vector2 percentClamp = new Vector2(0f,1f);
     [SerializeField] private Vector2 pitchRange = new Vector2(0f, 0.3f);
+    [SerializeField] private Vector2 pitchValues = new Vector2(0.8f, 3);// minPitchValue = .75f;
+    
     private float curWaitFactor = 1;
-    public float minPitchValue = .75f;
     private bool wasAudioActive;
 
     
@@ -23,7 +24,7 @@ public class AudioRepeat : MonoBehaviour
         curWaitFactor = per;
         if (per.InRange(pitchRange.x, pitchRange.y)) {
             var pitchPerc = 1-((per - pitchRange.x) / (pitchRange.y - pitchRange.x));
-            audioS.pitch = minPitchValue + (3- minPitchValue) * pitchPerc;
+            audioS.pitch = pitchValues.x + (pitchValues.y- pitchValues.x) * pitchPerc;
         }
     }
 
