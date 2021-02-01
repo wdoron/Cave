@@ -96,7 +96,7 @@ Material:
     - _Activate_Target_2: 0
     - _Activate_Target_3: 0
     - _Activate_Target_4: 1
-    - _Animation_speed: 0.4
+    - _Animation_speed: 1.81
     - _BackFace_Intensity: 1
     - _BumpScale: 1
     - _ColorBoost: 25
