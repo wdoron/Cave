@@ -25,13 +25,13 @@ public class RedLight : MonoBehaviour
         {
             redLight.intensity = (1 - per) * 3.2f;
 
-            Debug.Log(per + " A lot INTENSITY: " + redLight.intensity);
+            //Debug.Log(per + " A lot INTENSITY: " + redLight.intensity);
         }
         else
         {
             redLight.intensity = (1 - per) * 2.4f;
 
-            Debug.Log(per + " some INTENSITY: " + redLight.intensity);
+            //Debug.Log(per + " some INTENSITY: " + redLight.intensity);
         }
 
 

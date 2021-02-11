@@ -34,8 +34,8 @@ namespace Dweiss
 
         private void Register(bool on)
         {
-            if(on) MsgSystemStrFloat.S.Register(msgId, Action);
-            else if(MsgSystemStrFloat.S) MsgSystemStrFloat.S.Unregister(msgId, Action);
+            if(on) Dweiss.Msg.MsgSystem.Register(msgId, (System.Action<float>)Action);
+            else if(MsgSystemStrFloat.S) Dweiss.Msg.MsgSystem.Unregister(msgId, (System.Action<float>)Action);
         }
         
 

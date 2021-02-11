@@ -149,6 +149,7 @@ namespace Dweiss.Msg
         {
             if (S != null && S != this)
             {
+                Destroy(gameObject);
                 throw new System.Exception("Singelton error. Already set " + s + " cant init " + this);
             }
             s = this;

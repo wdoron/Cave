@@ -8,7 +8,6 @@ namespace Dweiss
     {
         public string defaultId = "";
         public float delay = -1;
-
         private void Reset() {
             defaultId = name;
         }
@@ -16,6 +15,7 @@ namespace Dweiss
         public void Raise()
         {
             RaiseMsg(defaultId);
+            
         }
         [ContextMenu("RaiseNow")]
         public void RaiseNow()
