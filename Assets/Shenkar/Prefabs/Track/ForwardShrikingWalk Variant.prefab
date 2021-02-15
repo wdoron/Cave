@@ -7,17 +7,22 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 280657799793281192}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7557ad75b67bc3749a006e9be72245f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   startArea: {fileID: 7962808923636138398}
   endArea: {fileID: 4941568940675742847}
-  scaleBy: 0
-  secondScale: {x: 0.25, y: 1, z: 1}
-  origin: {fileID: 0}
+  factorBy: 0
+  dontGoBack: 0
+  onFactorChanged:
+    m_PersistentCalls:
+      m_Calls: []
   firstScale: {x: 2.5, y: 1, z: 1}
+  secondScale: {x: 0.25, y: 1, z: 1}
+  toAffect: []
 --- !u!1 &8484989918851427457
 GameObject:
   m_ObjectHideFlags: 0
@@ -199,7 +204,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8862866194521473587, guid: 147d6720e8abe43459ef24d1abfad20e, type: 3}
       propertyPath: m_Name
-      value: ForwardShrikingWalk
+      value: ForwardShrikingWalk Variant
       objectReference: {fileID: 0}
     - target: {fileID: 8862866194521473587, guid: 147d6720e8abe43459ef24d1abfad20e, type: 3}
       propertyPath: m_IsActive

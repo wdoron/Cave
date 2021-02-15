@@ -99,10 +99,17 @@ public class Move : MonoBehaviour {
         if (v == 0 && h == 0 && y == 0) return;
 
         var deltaPos = new Vector3(h, y, v) * movePerSec * Time.deltaTime * factor;
-        
+
         if (moveByAbsoluteAxis == false) deltaPos = camT.rotation * deltaPos;
 
         Vector3 simpleDeltaPos = deltaPos;
+        DeltaMove(simpleDeltaPos, y);
+    }
+
+    public void DeltaMove(Vector3 simpleDeltaPos) {
+        DeltaMove(simpleDeltaPos, 0);
+    }
+    public void DeltaMove(Vector3 simpleDeltaPos, float y) { 
 
         if (useCamera == false)
             simpleDeltaPos = Vector3.ProjectOnPlane(simpleDeltaPos, Vector3.up);

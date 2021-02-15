@@ -65,7 +65,8 @@ namespace Dweiss.Msg
         public static void Unregister<T, V>(T id, Action<System.Object> action) { Get<T>().Unregister<V>(id, action); }
         public static void TryUnregister<T, V>(T id, Action<System.Object> action) { if (S) Get<T>().Unregister<V>(id, action); }
 
-        public static void Raise<T>(T id, float v) { Get<T>().Raise(id);  }
+        public static void Raise<T>(T id, float v) { Get<T>().Raise(id,v);
+            Debug.Log("Raised " + id + " :f: " + v); }
         public static void Register<T>(T id, Action<float> action) { Get<T>().Register(id, action); }
         public static void Unregister<T>(T id, Action<float> action) { Get<T>().Unregister(id, action); }
         public static void TryUnregister<T>(T id, Action<float> action) { if (S) Get<T>().Unregister(id, action); }
@@ -148,6 +149,7 @@ namespace Dweiss.Msg
         {
             if (S != null && S != this)
             {
+                Destroy(gameObject);
                 throw new System.Exception("Singelton error. Already set " + s + " cant init " + this);
             }
             s = this;
