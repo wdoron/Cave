@@ -31,7 +31,9 @@ public class AudioRepeat : MonoBehaviour
     void AudioDone() {
         var curFactor = Mathf.Clamp(curWaitFactor, percentClamp.x, percentClamp.y);
         var waitTime = defaultWaitTime * curFactor;
-        if (waitTime < Time.deltaTime) audioS.Play();
+
+        if (waitTime < Time.deltaTime) 
+            audioS.Play();
         else 
             this.WaitForSeconds(waitTime, () => audioS.Play());
 

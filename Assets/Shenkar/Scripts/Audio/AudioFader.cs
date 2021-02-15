@@ -11,6 +11,15 @@ namespace Shenkar
 
         private float targetVolume;
 
+        public bool fadeOnStart;
+
+        private void Awake() {
+            if (fadeOnStart) aSource.volume = 0;
+        }
+
+        private void Start() {
+            if (fadeOnStart) FadeIn();
+        }
         // Start is called before the first frame update
         void Reset() {
             aSource = GetComponent<AudioSource>();
