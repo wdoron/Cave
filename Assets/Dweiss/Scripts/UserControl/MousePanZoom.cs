@@ -16,7 +16,8 @@ public class MousePanZoom : MonoBehaviour {
 	{
 		Left = 0,
 		Right = 1,
-		Middle = 2
+		Middle = 2,
+		Always
 	}
 	public MouseButtons mouseButton = MouseButtons.Right;
 
@@ -24,8 +25,8 @@ public class MousePanZoom : MonoBehaviour {
     public bool forwardOnFloorOnly = false;
 	void Update ()
 	{
-
-		if (Input.GetMouseButton((int)mouseButton))
+		
+		if (mouseButton == MouseButtons.Always || Input.GetMouseButton((int)mouseButton))
 		{
 			rotationX += ( Input.GetAxis ("Mouse X") ) * lookSpeed;
 			rotationY += (Input.GetAxis ("Mouse Y") ) * lookSpeed;

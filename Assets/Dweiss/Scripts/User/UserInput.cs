@@ -11,6 +11,8 @@ public class UserInput : MonoBehaviour
     public Transform transDir;
     public Locomotion locomotion;
 
+    public float rotPower = 0.5f;
+    public float movePower = 1;
     public float strifeSideFactor = 1;
     public float teleportDistance = 1;
 
@@ -98,8 +100,8 @@ public class UserInput : MonoBehaviour
         var isInputFactor = IsPressed("Fire2", null, 12);//Input.GetButton("Fire2") || 
         var isMoveFactor = Input.GetButton("Fire3");
 
-        KeyboardMove(isInputFactor ? inputFactorOnBoost:1);
-        KeyboardRotate(isInputFactor ? inputFactorOnBoost : 1);
+        KeyboardMove(isInputFactor ? inputFactorOnBoost * movePower: movePower);
+        KeyboardRotate(isInputFactor ? inputFactorOnBoost * rotPower : rotPower);
         if(affectLocomotion) locomotion.SetXZFactor(isMoveFactor ? userLocomotionFactorOnBoost : 1);
 
         //wasJumping = IsPressedDown("Jump", null, 12, wasJumping);

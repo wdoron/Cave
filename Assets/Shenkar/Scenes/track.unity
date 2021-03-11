@@ -754,7 +754,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 682967007892098433, guid: 0ddc1d91ee548224fa4a8ef1708ae744, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 3fab741fa8e9d334e8afe9a687cc2996, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d47d736be364bd045bf808d6a051473d, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1557,6 +1557,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aSource: {fileID: 463971728}
   fadeTime: 0.8
+  fadeOnStart: 0
 --- !u!1001 &465140015
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2391,7 +2392,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5403339816180768254, guid: 35046ffd0f3214b499d961074be7d05e, type: 3}
       propertyPath: movePerSec
-      value: 0.5
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 5432959881772279476, guid: 35046ffd0f3214b499d961074be7d05e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2400,6 +2401,14 @@ PrefabInstance:
     - target: {fileID: 5435671019618017240, guid: 35046ffd0f3214b499d961074be7d05e, type: 3}
       propertyPath: m_Name
       value: LocomotionRig (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5435671019618017243, guid: 35046ffd0f3214b499d961074be7d05e, type: 3}
+      propertyPath: stepRotate
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5435671019618017243, guid: 35046ffd0f3214b499d961074be7d05e, type: 3}
+      propertyPath: inputFactorOnBoost
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5439110256795450342, guid: 35046ffd0f3214b499d961074be7d05e, type: 3}
       propertyPath: m_RootOrder
@@ -2608,6 +2617,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aSource: {fileID: 969230044}
   fadeTime: 0.8
+  fadeOnStart: 0
 --- !u!1001 &994466930
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2902,6 +2912,25 @@ MonoBehaviour:
         m_CallState: 2
   maxHistoryFrameCount: 100
   trackInFixedUpdate: 0
+--- !u!114 &1043343318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1043343313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 705ca45e6b94d45478734d3a7a88b2bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lookSpeed: 15
+  moveSpeed: 15
+  rotationX: 0
+  rotationY: 0
+  usePan: 0
+  mouseButton: 0
+  forwardOnFloorOnly: 0
 --- !u!1 &1088913693
 GameObject:
   m_ObjectHideFlags: 0
@@ -3044,6 +3073,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aSource: {fileID: 1088913695}
   fadeTime: 0.8
+  fadeOnStart: 0
 --- !u!4 &1102023447 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2198134279686639825, guid: 8ba36b35cc1163e499e0fbf1ddec222b, type: 3}
@@ -3795,6 +3825,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aSource: {fileID: 1328861245}
   fadeTime: 0.8
+  fadeOnStart: 0
 --- !u!1001 &1387060472
 PrefabInstance:
   m_ObjectHideFlags: 0
