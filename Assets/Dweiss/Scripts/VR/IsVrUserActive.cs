@@ -44,37 +44,38 @@ namespace Dweiss
         public bool testHmd = false;
         float TestIsActive()
         {
-            var isOn = testHmd == false || UnityEngine.XR.XRDevice.userPresence == UnityEngine.XR.UserPresenceState.Present;
-            var isMoving = (trans.localPosition != lastPos || lastRot != trans.localRotation) && isOn;
+            return 0;
+            //var isOn = testHmd == false || UnityEngine.XR.XRDevice.userPresence == UnityEngine.XR.UserPresenceState.Present;
+            //var isMoving = (trans.localPosition != lastPos || lastRot != trans.localRotation) && isOn;
 
-            lastRot = trans.localRotation;
-            lastPos = trans.localPosition;
+            //lastRot = trans.localRotation;
+            //lastPos = trans.localPosition;
 
-            if(wasMoving != isMoving)
-            {
-                wasMoving = isMoving;
+            //if(wasMoving != isMoving)
+            //{
+            //    wasMoving = isMoving;
 
-                if (isMoving == false)
-                {
-                    lastStandTime = Time.time;
-                }
-                else
-                {
-                    IsUserActive = true;
+            //    if (isMoving == false)
+            //    {
+            //        lastStandTime = Time.time;
+            //    }
+            //    else
+            //    {
+            //        IsUserActive = true;
 
-                    onUserActive.Invoke();
-                    onUserActiveChange.Invoke(true);
-                }
-            }
-            if (isMoving == false && Time.time - lastStandTime >= minFreezeTimeToDisable)
-            {
-                lastStandTime = Mathf.Infinity;
-                IsUserActive = false;
+            //        onUserActive.Invoke();
+            //        onUserActiveChange.Invoke(true);
+            //    }
+            //}
+            //if (isMoving == false && Time.time - lastStandTime >= minFreezeTimeToDisable)
+            //{
+            //    lastStandTime = Mathf.Infinity;
+            //    IsUserActive = false;
 
-                onUserNotActive.Invoke();
-                onUserActiveChange.Invoke(false);
-            }
-            return timeBetweenCheck;
+            //    onUserNotActive.Invoke();
+            //    onUserActiveChange.Invoke(false);
+            //}
+            //return timeBetweenCheck;
         }
 
     }

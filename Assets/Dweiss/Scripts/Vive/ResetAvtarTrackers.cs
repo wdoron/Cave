@@ -117,7 +117,8 @@ namespace Dweiss
 
         void ResetTrackers()
         {
-            if (UnityEngine.XR.XRDevice.isPresent == false) return;
+            return;
+            //if (UnityEngine.XR.XRDevice.isPresent == false) return;
 
             if(autoDetectLegSide)
                 CheckLegDir();

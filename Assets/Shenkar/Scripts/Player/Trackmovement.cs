@@ -24,7 +24,10 @@ namespace Dweiss
         }
         // Update is called once per frame
         void Update() {
-            if (trackInFixedUpdate || WantToSkipThisFrame) return;
+            if (trackInFixedUpdate || WantToSkipThisFrame) {
+                SkipThisFrame = false;
+                return;
+            }
 
             positions.Enqueue(transform.position);
             while (positions.Count > maxHistoryFrameCount) {
@@ -33,7 +36,11 @@ namespace Dweiss
         }
 
         void FixedUpdate() {
-            if (trackInFixedUpdate == false || WantToSkipThisFrame) return;
+            if (trackInFixedUpdate == false || WantToSkipThisFrame) {
+                SkipThisFrame = false;
+                return;
+            }
+
             positions.Enqueue(transform.position);
             while (positions.Count > maxHistoryFrameCount) {
                 positions.Dequeue();
